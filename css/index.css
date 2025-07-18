@@ -471,7 +471,7 @@ section.content2 .txt-box p:last-child span {
 section.content2 .img-box {
     width: 100%;
     box-sizing: border-box;
-    padding: 120px 0;
+    padding-top: 120px 0;
     opacity: 0;
 }
 
