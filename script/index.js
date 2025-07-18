@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     //맨처음에 다 숨기기기
-    $("section,header,.bg").not(".intro").hide();
+/*     $("section,header,.bg").not(".intro").hide();
 
     setTimeout(function () {
         $(".intro").fadeOut(1000, function() {
@@ -16,7 +16,7 @@ $(document).ready(function () {
                 });
             });
         });
-    },1000);
+    },1000); */
 
 
 
@@ -75,8 +75,9 @@ $(document).ready(function () {
 
         //3번쨰 섹션
         var contentText2 = $(".content2 .txt-box").offset().top; //텍스트 위치!!2400
-        //4350 //3600
-        if (contentText2 - 700 <= scrollTop) {
+        //2650 //2000
+        if (contentText2-200<= scrollTop) {
+           
             $(".content2 .txt-box h2 span").css({
                 transform: "translateY(0)",
                 opacity: 1,
@@ -94,7 +95,7 @@ $(document).ready(function () {
                 transition: "all 2s ease-in-out"
             });
         }
-
+        /////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         //화면에서 보이는 상단 기준으로로
         var content2 = $(".content2 .txt-box")[0].getBoundingClientRect().top;
         var imgBox = $(".content2 .img-box").offset().top;
@@ -117,8 +118,6 @@ $(document).ready(function () {
         }
 
         var rotate = gap2;
-
-        console.log(rotate + "rotate");
         var rotateBox = $(".content2 .img-box")[0].getBoundingClientRect().top;
 
         if (rotate > 0.8) {
@@ -130,5 +129,10 @@ $(document).ready(function () {
             })
         }
 
+        //5번쨰 섹션
+        var con4 = $(".content4 .inner .title-box").offset().top;
+        var con4Height = $(".content4 .inner .title-box").outerHeight();
+        var sectionHeight = $('.content4').outerHeight();
+       
     });
 });
