@@ -1,14 +1,14 @@
 
 $(document).ready(function () {
     //맨처음에 다 숨기기기
-/*     $("section,header,.bg").not(".intro").hide();
+    $("section,header,.bg").not(".intro").hide();
 
     setTimeout(function () {
-        $(".intro").fadeOut(1000, function() {
+        $(".intro").fadeOut(1000, function () {
             // 1. 헤더 등장
-            $("header").fadeIn(800, function() {
+            $("header").fadeIn(800, function () {
                 // 2. .bg 등장
-                $(".bg").fadeIn(800, function() {
+                $(".bg").fadeIn(800, function () {
                     // 3. .bg.active 효과(애니메이션)
                     $(".bg").addClass("active").delay(800).fadeOut(800);
                     // 4. 애니메이션이 끝난 뒤 .bg 사라짐
@@ -16,7 +16,7 @@ $(document).ready(function () {
                 });
             });
         });
-    },1000); */
+    }, 1000);
 
 
 
@@ -76,8 +76,8 @@ $(document).ready(function () {
         //3번쨰 섹션
         var contentText2 = $(".content2 .txt-box").offset().top; //텍스트 위치!!2400
         //2650 //2000
-        if (contentText2-200<= scrollTop) {
-           
+        if (contentText2 - 200 <= scrollTop) {
+
             $(".content2 .txt-box h2 span").css({
                 transform: "translateY(0)",
                 opacity: 1,
@@ -133,6 +133,6 @@ $(document).ready(function () {
         var con4 = $(".content4 .inner .title-box").offset().top;
         var con4Height = $(".content4 .inner .title-box").outerHeight();
         var sectionHeight = $('.content4').outerHeight();
-       
+
     });
 });
