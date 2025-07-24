@@ -19,10 +19,6 @@ $(document).ready(function () {
     }, 1000);
 
 
-
-
-
-
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         loop: true,
@@ -129,10 +125,52 @@ $(document).ready(function () {
             })
         }
 
-        //5번쨰 섹션
-        var con4 = $(".content4 .inner .title-box").offset().top;
-        var con4Height = $(".content4 .inner .title-box").outerHeight();
+        //5번쨰 섹션 시작점점
+        var box = $(".content4 .inner .title-box")
+        var boxStart = $(".content4").offset().top;
+        var boxHeight = $(".content4").outerHeight();
+
+        var titletHeight = $(".content4 .inner .title-box").outerHeight();
         var sectionHeight = $('.content4').outerHeight();
+
+        var boxEnd = boxStart + boxHeight - titletHeight;
+        //console.log(scrollTop,boxStart, boxEnd);
+        //boxstart가 스크롤 탑보다 커지면 글자가 조금씩 올라오게!!
+        //스크롤탑이 커지는 값이니까 그걸로 조절!!
+        var gap4 = ((boxStart - scrollTop) * 0.1) + 150;
+        console.log(gap4);
+
+
+        if (scrollTop >= boxStart && scrollTop < boxEnd) {
+            box.css({
+                position: 'fixed',
+                top: '100px',
+                left: "50%",
+                width: '100%',
+                transform: 'translate(-50%, 0%)',
+            });
+            $(".content4 .inner .title-box h2 span").css({
+                transform: "translateY(" + gap4 + "%)"
+            });
+
+        }
+        else if (scrollTop >= boxEnd) {
+            box.css({
+                position: 'absolute',
+                top: (boxEnd - boxStart) + 'px',
+                left: 0,
+                width: '100%'
+            });
+        }
+        else {
+            box.css({
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '100%'
+            });
+        }
 
     });
 });

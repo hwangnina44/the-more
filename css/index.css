@@ -391,7 +391,7 @@ section.content .txt-box .btn a {
 section.content .bg-img-box {
     width: 100%;
     height: 100%;
-    position: sticky;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1;
@@ -587,13 +587,11 @@ section.content3 .icon-box-wrap .icon-box .des-box p {
 section.content4 {
     width: 100%;
     padding: 500px 0;
-    height: 100%;
+    
 
 }
 
 section.content4 .inner {
-    height: 100%;
-    width: 100%;
     position: relative;
 }
 
@@ -608,8 +606,9 @@ section.content4 .inner .title-box {
 }
 
 section.content4 .inner .title-box h2 {
-    font-size: 160px;
+    font-size: 180px;
     font-weight: 300;
+    padding-bottom: 20px;
     overflow: hidden;
 }
 
@@ -622,4 +621,14 @@ section.content4 .inner .title-box h2 span.now {
     border: 8px solid #dca854;
     padding: 20px 48px;
     border-radius: 300px;
+}
+
+section.content4 .content4-img-box {
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    grid-template-rows: repeat(2, 500px);
+    gap: 20px;
+}
+section.content4 .content4-img-box img:nth-child(4) {
+    grid-row: span 0.5;
 }
