@@ -10,9 +10,9 @@ $(document).ready(function () {
                 // 2. .bg 등장
                 $(".bg").fadeIn(800, function () {
                     // 3. .bg.active 효과(애니메이션)
-                    $(".bg").addClass("active").delay(800).fadeOut(800);
-                    // 4. 애니메이션이 끝난 뒤 .bg 사라짐
-                    $("section:not(.intro)").fadeIn(800);
+                    $(".bg").addClass("active").delay(800).fadeOut(function () {
+                        $("section:not(.intro)").fadeIn();
+                    });
                 });
             });
         });
@@ -137,7 +137,8 @@ $(document).ready(function () {
         //console.log(scrollTop,boxStart, boxEnd);
         //boxstart가 스크롤 탑보다 커지면 글자가 조금씩 올라오게!!
         //스크롤탑이 커지는 값이니까 그걸로 조절!!
-        var gap4 = ((boxStart - scrollTop) * 0.1) + 150;
+        var gap4 = ((boxStart - scrollTop) * 0.1)+100;
+        gap4 = Math.max(gap4, 0);
         console.log(gap4);
 
 
@@ -149,9 +150,25 @@ $(document).ready(function () {
                 width: '100%',
                 transform: 'translate(-50%, 0%)',
             });
-            $(".content4 .inner .title-box h2 span").css({
+
+
+           $(".content4 .inner .title-box h2 span").css({
                 transform: "translateY(" + gap4 + "%)"
             });
+
+/* 
+            $(".content4 .content4-img-box img:nth-child(1)").css({
+                transform: "translate(" + -gap4 + "%, 0)"
+            });
+            $(".content4 .content4-img-box img:nth-child(2)").css({
+                transform: "translate(0, 200%)"
+            });
+            $(".content4 .content4-img-box img:nth-child(3)").css({
+                transform: "translate(-200%, 0)"
+            });
+            $(".content4 .content4-img-box img:nth-child(4)").css({
+                transform: "translate(0, 200%)"
+            }); */
 
         }
         else if (scrollTop >= boxEnd) {
