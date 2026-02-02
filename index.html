@@ -11,7 +11,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/jquery-1.12.4.min.js"></script>
-    <script src="script/index.js"></script>
+    <!--  <script src="script/index.js"></script> -->
 
     <title>더모어엔터테인먼트 | THE MORE 엔터테인먼트</title>
 </head>
@@ -311,6 +311,81 @@
                 <img src="img/create_img_4.jpg" alt="배경이미지">
             </div>
         </div>
+    </section>
+    <section class="information">
+        <div class="inner">
+            <div class="title">
+                <h2>Get in touch</h2>
+                <p>
+                    크리에이터 지원부터 제휴 문의까지<br>
+                    더모어는 당신의 이야기를 기다립니다.
+                </p>
+            </div>
+            <div class="info-box">
+                <div class="info-box">
+                    <div class="info-box-wrap">
+                        <form action="#" method="post" name="info">
+                            <fieldset>
+                                <legend>개인정보</legend>
+                                <p>
+                                    <label for="name">이름</label>
+                                    <input type="text" id="name" name="name" placeholder="성함을 입력해주세요.">
+                                </p>
+                                <p>
+                                    <label for="age">나이</label>
+                                    <input type="text" id="age" name="name" placeholder="나이를 입력해주세요.">
+                                </p>
+
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>개인정보</legend>
+                                <p>
+                                    <label for="tel">연락처</label>
+                                    <input type="tel" id="tel" name="tel" placeholder="전화번호를 입력해주세요.">
+                                </p>
+                                <p>
+                                    <label for="address">주소</label>
+                                    <input type="text" id="address" name="address" placeholder="주소를 입력해주세요.">
+                                </p>
+                            </fieldset>
+
+                            <fieldset class="gender">
+                                <legend>개인정보</legend>
+                                <p>
+                                    성별
+                                    <label for="gender-male">
+                                        <input type="radio" id="gender" name="gender" value="male">
+                                        <span>남</span>
+                                    </label>
+
+                                    <label for="gender-female">
+                                        <input type="radio" id="gender" name="gender" value="female">
+                                        <span>여</span>
+                                    </label>
+
+                                </p>
+
+                                <p>
+                                    <label for="list">지원항목</label>
+                                    <select name="job" id="list">
+                                        <option value="BJ">BJ</option>
+                                        <option value="creator">크리에이터</option>
+                                        <option value="tiktok">틱톡커</option>
+                                    </select>
+                                </p>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>경력사항</legend>
+                                <label for="career">경력사항</label>
+                                <textarea name="career" id="career" rows="5" placeholder="경력 사항을 입력해주세요" readonly></textarea>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
     </section>
 </body>
 
